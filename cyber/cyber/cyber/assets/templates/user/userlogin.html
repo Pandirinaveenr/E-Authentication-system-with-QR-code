@@ -1,0 +1,125 @@
+{% extends 'user/userbase.html' %}
+{% load static %}
+
+{% block contents %}
+
+<section class="py-4 py-xl-5">
+  <div class="container">
+    <div class="row d-flex justify-content-center">
+      <div class="col-md-6 col-xl-4">
+        <div class="card mb-5">
+          <div class="card-body d-flex flex-column align-items-center">
+            <h4>User Login-Page</h4>
+            <form class="text-center" action="/userlogincheck/" method="post">
+              {% csrf_token %}
+              <div class="mb-3">
+                <input class="form-control" type="email" name="email" required="" placeholder="Email">
+              </div>
+              <div class="mb-3">
+                <input class="form-control" name="password" required="" placeholder="e.g. 1,15; 1,17">
+              </div>
+              <div class="mb-3">
+                <button class="btn btn-primary d-block w-100" type="submit">Login</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  body {
+    font-family: Arial, sans-serif;
+  }
+  .key {
+    display: inline-block;
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #efebeb;
+    border-radius: 40px;
+    cursor: pointer;
+    user-select: none;
+  }
+  .key:hover {
+    background-color: #0c3259;
+  }
+  table {
+    position: absolute;
+    top: 100px;
+    left: 1000px;
+  }
+</style>
+
+<table border="1">
+  <tr>
+      <th style="color:rgb(245, 241, 241)">1</th>
+      <th style="color:rgb(245, 241, 241)">2</th>
+      <th style="color:rgb(245, 241, 241)">3</th>
+      <th style="color:rgb(245, 241, 241)">4</th>
+      <th style="color:rgb(245, 241, 241)">5</th>
+      <th style="color:rgb(245, 241, 241)">6</th>
+      <th style="color:rgb(245, 241, 241)">7</th>
+      <th style="color:rgb(245, 241, 241)">8</th>
+  </tr>
+  <tr>
+      <td style="color:rgb(245, 241, 241)"><div class="key">A</div></td>
+      <td style="color:rgb(245, 241, 241)"><div class="key">B</div></td>
+      <td style="color:rgb(245, 241, 241)"><div class="key">C</div></td>
+      <td style="color:rgb(245, 241, 241)"><div class="key">D</div></td>
+      <td style="color:rgb(245, 241, 241)"><div class="key">E</div></td>
+      <td style="color:rgb(245, 241, 241)"><div class="key">F</div></td>
+      <td style="color:rgb(245, 241, 241)"><div class="key">G</div></td>
+      <td style="color:rgb(245, 241, 241)"><div class="key">H</div></td>
+      <th style="color:rgb(245, 241, 241)">9</th>
+  </tr>
+  <tr>
+      <td style="color:rgb(245, 241, 241)"><div class="key">I</div></td>
+      <td style="color:rgb(245, 241, 241)"><div class="key">J</div></td>
+      <td style="color:rgb(245, 241, 241)"><div class="key">K</div></td>
+      <td style="color:rgb(245, 241, 241)"><div class="key">L</div></td>
+      <td style="color:rgb(245, 241, 241)"><div class="key">M</div></td>
+      <td style="color:rgb(245, 241, 241)"><div class="key">N</div></td>
+      <td style="color:rgb(245, 241, 241)"><div class="key">O</div></td>
+      <td style="color:rgb(245, 241, 241)"><div class="key">P</div></td>
+      <th style="color:rgb(245, 241, 241)">10</th>
+  </tr>
+  <tr>
+      <td style="color:rgb(245, 241, 241)"><div class="key">Q</div></td>
+      <td style="color:rgb(245, 241, 241)"><div class="key">R</div></td>
+      <td style="color:rgb(245, 241, 241)"><div class="key">S</div></td>
+      <td style="color:rgb(245, 241, 241)"><div class="key">T</div></td>
+      <td style="color:rgb(245, 241, 241)"><div class="key">U</div></td>
+      <td style="color:rgb(245, 241, 241)"><div class="key">V</div></td>
+      <td style="color:rgb(245, 241, 241)"><div class="key">W</div></td>
+      <td style="color:rgb(245, 241, 241)"><div class="key">X</div></td>
+      <th style="color:rgb(245, 241, 241)">11</th>
+  </tr>
+  <tr>
+      <td style="color:rgb(245, 241, 241)"><div class="key">Y</div></td>
+      <td style="color:rgb(245, 241, 241)"><div class="key">Z</div></td>
+      <td style="color:rgb(245, 241, 241)"><div class="key">1</div></td>
+      <td style="color:rgb(245, 241, 241)"><div class="key">2</div></td>
+      <td style="color:rgb(245, 241, 241)"><div class="key">3</div></td>
+      <td style="color:rgb(245, 241, 241)"><div class="key">4</div></td>
+      <td style="color:rgb(245, 241, 241)"><div class="key">5</div></td>
+      <td style="color:rgb(245, 241, 241)"><div class="key">6</div></td>
+      <th style="color:rgb(245, 241, 241)">12</th>
+  </tr>
+  <tr>
+      <td style="color:rgb(245, 241, 241)"><div class="key">7</div></td>
+      <td style="color:rgb(245, 241, 241)"><div class="key">8</div></td>
+      <td style="color:rgb(245, 241, 241)"><div class="key">9</div></td>
+      <td style="color:rgb(245, 241, 241)"><div class="key">0</div></td>
+      <td style="color:rgb(245, 241, 241)"><div class="key">@</div></td>
+      <td style="color:rgb(245, 241, 241)"><div class="key">-</div></td>
+      <td style="color:rgb(245, 241, 241)"><div class="key">_</div></td>
+      <td style="color:rgb(245, 241, 241)"><div class="key">$</div></td>
+      <th style="color:rgb(245, 241, 241)">13</th>
+  </tr>
+</table>
+
+
+
+{% endblock %}

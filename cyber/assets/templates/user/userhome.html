@@ -1,0 +1,52 @@
+{% extends 'user/userbase.html' %}
+{% load static %}
+
+{% block contents %}
+<br><br><br>
+<section class="py-4 py-xl-5">
+    <div class="container">
+      <div class="row d-flex justify-content-center">
+        <div class="col-md-6 col-xl-4">
+          <div class="card mb-5">
+            <div class="card-body d-flex flex-column align-items-center">
+              <h4>Email Verification</h4>
+              <form class="text-center" action="/otpcheck/" method="post">
+                {% csrf_token %}
+                <div class="mb-3">
+                  <input class="form-control" type="email" name="email" placeholder="Enter your email">
+                </div>
+                <div class="mb-3">
+                  <button class="btn btn-primary d-block w-100" type="submit">Submit</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="py-4 py-xl-5">
+    <div class="container">
+      <div class="row d-flex justify-content-center">
+        <div class="col-md-6 col-xl-4">
+          <div class="card mb-5">
+            <div class="card-body d-flex flex-column align-items-center">
+              <h4>OTP Verification</h4>
+              <form class="text-center" action="/otpverify/" method="post">
+                {% csrf_token %}
+                <div class="mb-3">
+                  <input class="form-control" type="otp" name="otp" placeholder="Enter your otp">
+                </div>
+                <div class="mb-3">
+                  <button class="btn btn-primary d-block w-100" type="submit">Verify</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+{% endblock %}

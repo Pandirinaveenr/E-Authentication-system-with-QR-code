@@ -1,0 +1,35 @@
+{% extends 'admin/adminbase.html' %}
+{% load static %}
+
+{% block contents %}
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h4 class="text-center" style="color:rgb(4, 4, 4)">User List</h4>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th style="color:rgb(245, 241, 241)">Name</th>
+                        <th style="color:rgb(245, 241, 241)">Email</th>
+                        <th style="color:rgb(245, 241, 241)">Phone</th>
+                        <th style="color:rgb(245, 241, 241)">Image</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for user in data %}
+                    <tr>
+                        <td style="color:rgb(245, 241, 241)">{{ user.name }}</td>
+                        <td style="color:rgb(245, 241, 241)">{{ user.email }}</td>
+                        <td style="color:rgb(245, 241, 241)">{{ user.phone }}</td>
+                        <td style="color:rgb(245, 241, 241)"><img src="{{ user.images }}" alt="" width="100px"
+                                height="100px"></td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+{% endblock %}

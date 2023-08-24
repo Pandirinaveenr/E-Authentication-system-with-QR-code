@@ -1,0 +1,33 @@
+{% extends 'admin/adminbase.html' %}
+{% load static %}
+
+{% block contents %}
+
+<div class="row register-form">
+    <div class="col-md-6 offset-md-1">
+        <form class="custom-form" action="/adduser/" method="POST">
+            {% csrf_token %}
+            <h1>Register Form</h1>
+            <div class="mb-3">
+                <input class="form-control" type="text" name="name" required="" placeholder="User-name">
+              </div>
+              <div class="mb-3">
+                <input class="form-control" type="Email" name="email" required="" placeholder="Email">
+              </div>
+              <div class="mb-3">
+                <input class="form-control" type="password" name="password" required="" placeholder="Password">
+              </div>
+              <div class="mb-3">
+                <input class="form-control" type="text" name="phonenumber" required="" placeholder="phonenumber">
+              </div>
+              <div class="mb-3">
+                <input class="form-control" type="file" name="image" required="" placeholder="image">
+                </div>
+              <div class="mb-3">
+                <button class="btn btn-light submit-button" type="submit" name="submit">Submit Form</button>
+              </div>
+        </form>
+    </div>
+</div>
+
+{% endblock %}
